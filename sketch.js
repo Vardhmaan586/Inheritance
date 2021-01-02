@@ -5,6 +5,7 @@ var pig1,pig2;
 var log1,log2,log3,log4;
 var bird
 var bg;
+var platform;
 
 const Engine = Matter.Engine; //namespacing
 const World = Matter.World;
@@ -22,6 +23,8 @@ function setup() {
   world = engine.world;
 
 bird = new Bird(150,200);
+
+platform = new Ground(160,305,300,170);
   
  log1 = new Log(810,285,320,PI/2);
 log2 = new Log(810,180,320,PI/2);
@@ -58,7 +61,7 @@ function draw() {
   log2.display();
   log3.display();
  log4.display();
-  
+  platform.display();
 
   
 }
